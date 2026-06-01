@@ -1,0 +1,48 @@
+/* Custom Fastos Style */
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+    background-color: #111111 !important;
+    padding: 1rem 0;
+}
+
+.logo {
+    color: #FF6B00 !important;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://picsum.photos/id/1015/1920/1080');
+    background-size: cover;
+    background-position: center;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.card {
+    transition: all 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(255, 107, 0, 0.2) !important;
+    }
+
+.btn-warning {
+    background-color: #FF6B00;
+    border-color: #FF6B00;
+}
+
+    .btn-warning:hover {
+        background-color: #e55a00;
+        border-color: #e55a00;
+    }
+
+.text-warning {
+    color: #FF6B00 !important;
+}

@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Shopping Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container py-5">
+    <h2 class="fw-bold mb-4">Your Cart</h2>
+
+    <div class="row">
+        <!-- Cart Items -->
+        <div class="col-lg-8">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <!-- Sample Cart Item -->
+                    <div class="row align-items-center border-bottom pb-3 mb-3" id="cartItem1">
+                        <div class="col-md-3">
+                            <img src="https://picsum.photos/id/201/150/150" class="img-fluid rounded" alt="Burger">
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Classic Cheese Burger</h5>
+                            <p class="text-muted small">Rs. 450 × 1</p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="input-group">
+                                <button class="btn btn-outline-secondary">-</button>
+                                <input type="text" class="form-control text-center" value="1" style="max-width: 60px;">
+                                <button class="btn btn-outline-secondary">+</button>
+                            </div>
+                        </div>
+                        <div class="col-md-2 text-end">
+                            <h5 class="text-warning">Rs. 450</h5>
+                            <button class="btn btn-sm btn-danger mt-2" onclick="removeItem(1)">Remove</button>
+                        </div>
+                    </div>
+
+                    <!-- You can duplicate the above block for more items -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="col-lg-4">
+            <div class="card shadow-sm sticky-top" style="top: 20px;">
+                <div class="card-body">
+                    <h5 class="card-title">Order Summary</h5>
+                    <hr>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Subtotal</span>
+                        <span>Rs. 450</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Delivery Fee</span>
+                        <span>Rs. 80</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between fw-bold">
+                        <span>Total</span>
+                        <span class="text-warning">Rs. 530</span>
+                    </div>
+
+                    <a href="/Cart/Checkout" class="btn btn-warning w-100 mt-4 py-3 fw-bold">
+                        PROCEED TO CHECKOUT
+                    </a>
+
+                    <a href="/Menu" class="btn btn-outline-secondary w-100 mt-2">Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function removeItem(id) {
+        if (confirm("Remove this item?")) {
+            alert("Item removed (Frontend demo)");
+            // document.getElementById('cartItem' + id).remove();
+        }
+    }
+</script>

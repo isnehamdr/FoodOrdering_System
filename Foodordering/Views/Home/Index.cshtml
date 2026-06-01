@@ -1,0 +1,134 @@
+﻿@{
+    ViewData["Title"] = "Fastos - Food Delivery";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Hero Section -->
+<section class="hero text-white py-5" style="min-height: 85vh; display: flex; align-items: center;">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+                <h1 class="display-3 fw-bold mb-4">Hungry?<br>Order Now!</h1>
+                <p class="lead mb-5 fs-4">Fresh & delicious food delivered to your doorstep in Kathmandu</p>
+
+                <div class="input-group mb-4 mx-auto" style="max-width: 520px;">
+                    <input type="text" class="form-control form-control-lg py-3" placeholder="Search your favorite food..." />
+                    <button class="btn btn-warning btn-lg px-5">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <a href="/Menu" class="btn btn-warning btn-lg px-5 py-3 fw-bold">BROWSE MENU</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Categories -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Popular Categories</h2>
+        <div class="row g-4 text-center">
+            <div class="col-6 col-md-3">
+                <div class="card border-0 shadow-sm h-100">
+                    <img src="https://picsum.photos/id/20/400/250" class="card-img-top" alt="Burger">
+                    <div class="card-body">
+                        <h5 class="card-title">Burgers</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card border-0 shadow-sm h-100">
+                    <img src="https://picsum.photos/id/292/400/250" class="card-img-top" alt="Pizza">
+                    <div class="card-body">
+                        <h5 class="card-title">Pizza</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card border-0 shadow-sm h-100">
+                    <img src="https://picsum.photos/id/431/400/250" class="card-img-top" alt="Asian">
+                    <div class="card-body">
+                        <h5 class="card-title">Asian</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card border-0 shadow-sm h-100">
+                    <img src="https://picsum.photos/id/1080/400/250" class="card-img-top" alt="Drinks">
+                    <div class="card-body">
+                        <h5 class="card-title">Drinks</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Popular Items -->
+<section class="py-5">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <h2 class="fw-bold">Popular This Week</h2>
+            <a href="/Menu" class="btn btn-outline-warning">View All Menu →</a>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://picsum.photos/id/201/400/280" class="card-img-top" alt="Cheese Burger">
+                    <div class="card-body">
+                        <h6>Classic Cheese Burger</h6>
+                        <p class="text-muted small">Beef • Cheese • Fresh Veggies</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h5 class="text-warning mb-0">Rs. 450</h5>
+                            <a href="/Product/Details" class="btn btn-sm btn-warning">Add</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://picsum.photos/id/292/400/280" class="card-img-top" alt="Pizza">
+                    <div class="card-body">
+                        <h6>Pepperoni Pizza</h6>
+                        <p class="text-muted small">Large • Cheesy</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h5 class="text-warning mb-0">Rs. 850</h5>
+                            <a href="/Product/Details" class="btn btn-sm btn-warning">Add</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://picsum.photos/id/431/400/280" class="card-img-top" alt="Fried Rice">
+                    <div class="card-body">
+                        <h6>Chicken Fried Rice</h6>
+                        <p class="text-muted small">Spicy • Nepali Style</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h5 class="text-warning mb-0">Rs. 320</h5>
+                            <a href="/Product/Details" class="btn btn-sm btn-warning">Add</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://picsum.photos/id/669/400/280" class="card-img-top" alt="Pasta">
+                    <div class="card-body">
+                        <h6>Creamy Alfredo Pasta</h6>
+                        <p class="text-muted small">Chicken • Creamy</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h5 class="text-warning mb-0">Rs. 520</h5>
+                            <a href="/Product/Details" class="btn btn-sm btn-warning">Add</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

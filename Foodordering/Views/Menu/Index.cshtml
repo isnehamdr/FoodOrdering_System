@@ -1,0 +1,93 @@
+﻿@{
+    ViewData["Title"] = "Menu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container py-5">
+    <h2 class="text-center fw-bold mb-5">Our Menu</h2>
+
+    <!-- Category Filter Buttons -->
+    <div class="text-center mb-5">
+        <button class="btn btn-outline-warning mx-2 active" onclick="filterCategory('all')">All</button>
+        <button class="btn btn-outline-warning mx-2" onclick="filterCategory('burger')">Burgers</button>
+        <button class="btn btn-outline-warning mx-2" onclick="filterCategory('pizza')">Pizza</button>
+        <button class="btn btn-outline-warning mx-2" onclick="filterCategory('asian')">Asian</button>
+        <button class="btn btn-outline-warning mx-2" onclick="filterCategory('drink')">Drinks</button>
+    </div>
+
+    <!-- Menu Items Grid -->
+    <div class="row g-4" id="menuItems">
+
+        <!-- Item 1 -->
+        <div class="col-lg-4 col-md-6 menu-item" data-category="burger">
+            <div class="card h-100 shadow-sm">
+                <img src="https://picsum.photos/id/201/600/400" class="card-img-top" alt="Cheese Burger">
+                <div class="card-body">
+                    <h5>Classic Cheese Burger</h5>
+                    <p class="text-muted">Beef patty, cheese, lettuce, tomato, special sauce</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <h4 class="text-warning mb-0">Rs. 450</h4>
+                        <div>
+                            <a href="/Product/Details" class="btn btn-sm btn-outline-warning me-2">View</a>
+                            <button class="btn btn-sm btn-warning" onclick="addToCart(1)">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="col-lg-4 col-md-6 menu-item" data-category="pizza">
+            <div class="card h-100 shadow-sm">
+                <img src="https://picsum.photos/id/292/600/400" class="card-img-top" alt="Pepperoni Pizza">
+                <div class="card-body">
+                    <h5>Pepperoni Pizza</h5>
+                    <p class="text-muted">Classic pepperoni with mozzarella cheese</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <h4 class="text-warning mb-0">Rs. 850</h4>
+                        <div>
+                            <a href="/Product/Details" class="btn btn-sm btn-outline-warning me-2">View</a>
+                            <button class="btn btn-sm btn-warning" onclick="addToCart(2)">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="col-lg-4 col-md-6 menu-item" data-category="asian">
+            <div class="card h-100 shadow-sm">
+                <img src="https://picsum.photos/id/431/600/400" class="card-img-top" alt="Chicken Fried Rice">
+                <div class="card-body">
+                    <h5>Chicken Fried Rice</h5>
+                    <p class="text-muted">Spicy chicken with vegetables</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <h4 class="text-warning mb-0">Rs. 320</h4>
+                        <div>
+                            <a href="/Product/Details" class="btn btn-sm btn-outline-warning me-2">View</a>
+                            <button class="btn btn-sm btn-warning" onclick="addToCart(3)">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function filterCategory(category) {
+        const items = document.querySelectorAll('.menu-item');
+        items.forEach(item => {
+            if (category === 'all') {
+                item.style.display = 'block';
+            } else {
+                item.style.display = item.getAttribute('data-category') === category ? 'block' : 'none';
+            }
+        });
+    }
+
+    function addToCart(id) {
+        alert("Item added to cart! (Frontend only for now)");
+    }
+</script>
